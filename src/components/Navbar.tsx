@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const navItems = ["Home", "Work", "Resume"];
+const navItems = ["Home", "Projects", "Resume"];
 
 const Navbar = () => {
   const [active, setActive] = useState("Home");
@@ -24,9 +24,8 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 flex justify-center pt-4 md:pt-6 px-4">
       <div
-        className={`inline-flex items-center rounded-full backdrop-blur-md border border-white/10 bg-surface px-2 py-2 transition-shadow duration-300 ${
-          scrolled ? "shadow-md shadow-black/10" : ""
-        }`}
+        className={`inline-flex items-center rounded-full backdrop-blur-md border border-white/10 bg-surface px-2 py-2 transition-shadow duration-300 ${scrolled ? "shadow-md shadow-black/10" : ""
+          }`}
       >
         {/* Logo */}
         <button
@@ -40,7 +39,7 @@ const Navbar = () => {
           }}
         >
           <div className="w-full h-full rounded-full bg-bg flex items-center justify-center">
-            <span className="font-display italic text-[13px] text-text-primary">JA</span>
+            <span className="font-display italic text-[13px] text-text-primary">DQ</span>
           </div>
         </button>
 
@@ -51,11 +50,10 @@ const Navbar = () => {
           <button
             key={item}
             onClick={() => handleNav(item)}
-            className={`text-xs sm:text-sm rounded-full px-3 sm:px-4 py-1.5 sm:py-2 transition-all duration-200 ${
-              active === item
-                ? "text-text-primary bg-stroke/50"
-                : "text-muted hover:text-text-primary hover:bg-stroke/50"
-            }`}
+            className={`text-xs sm:text-sm rounded-full px-3 sm:px-4 py-1.5 sm:py-2 transition-all duration-200 ${active === item
+              ? "text-text-primary bg-stroke/50"
+              : "text-muted hover:text-text-primary hover:bg-stroke/50"
+              }`}
           >
             {item}
           </button>

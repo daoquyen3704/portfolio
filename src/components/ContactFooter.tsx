@@ -3,7 +3,11 @@ import Hls from "hls.js";
 import gsap from "gsap";
 
 const HLS_SRC = "https://stream.mux.com/Aa02T7oM1wH5Mk5EEVDYhbZ1ChcdhRsS2m1NYyx4Ua1g.m3u8";
-const socials = ["Twitter", "LinkedIn", "Dribbble", "GitHub"];
+const socials = [
+  { name: "LinkedIn", url: "https://www.linkedin.com/in/duy-quyền-đào-157494308" },
+  { name: "Facebook", url: "https://facebook.com/daoduyquyen04" },
+  { name: "GitHub", url: "https://github.com/daoquyen3704" }
+];
 const marqueeText = "BUILDING THE FUTURE • ";
 
 const ContactFooter = () => {
@@ -65,10 +69,10 @@ const ContactFooter = () => {
         <div className="text-center mb-16 px-6">
           <p className="text-sm text-muted mb-4 uppercase tracking-[0.2em]">Get in touch</p>
           <a
-            href="mailto:hello@michaelsmith.com"
+            href="mailto:daoquyen.dev@gmail.com"
             className="inline-flex items-center gap-2 rounded-full border border-stroke px-8 py-4 text-lg text-text-primary hover:bg-stroke/20 transition-colors"
           >
-            hello@michaelsmith.com <span>↗</span>
+            daoquyen.dev@gmail.com <span>↗</span>
           </a>
         </div>
 
@@ -76,8 +80,14 @@ const ContactFooter = () => {
         <div className="max-w-[1200px] mx-auto px-6 md:px-10 lg:px-16 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-stroke pt-6">
           <div className="flex items-center gap-6">
             {socials.map((s) => (
-              <a key={s} href="#" className="text-xs text-muted hover:text-text-primary transition-colors uppercase tracking-wider">
-                {s}
+              <a
+                key={s.name}
+                href={s.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs text-muted hover:text-text-primary transition-colors uppercase tracking-wider"
+              >
+                {s.name}
               </a>
             ))}
           </div>

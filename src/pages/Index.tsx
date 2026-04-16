@@ -3,8 +3,8 @@ import LoadingScreen from "@/components/LoadingScreen";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import SelectedWorks from "@/components/SelectedWorks";
-import JournalSection from "@/components/JournalSection";
-import ExplorationsSection from "@/components/ExplorationsSection";
+import SkillsSection from "@/components/SkillsSection";
+import ExperienceSection from "@/components/ExperienceSection";
 import StatsSection from "@/components/StatsSection";
 import ContactFooter from "@/components/ContactFooter";
 
@@ -17,8 +17,8 @@ const Index = () => {
       <Navbar />
       <HeroSection />
       <SelectedWorks />
-      <JournalSection />
-      <ExplorationsSection />
+      <SkillsSection />
+      <ExperienceSection />
       <StatsSection />
       <ContactFooter />
     </>
